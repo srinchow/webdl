@@ -163,8 +163,8 @@ AudioHandler.has_gzip = has_gzip
 VideoHandler.smart_write = smart_reply
 VideoHandler.has_gzip = has_gzip
 
-print("Server listening on {}".format(3000))
+print("Server listening on {}".format(5000))
 
 app = make_app()
-app.listen(3000)
+app.listen(5000)
 tornado.ioloop.IOLoop.current().start()
