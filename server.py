@@ -21,14 +21,6 @@ mimetable = {
 }
 
 
-def sha_hash(content):
-    if type(content) == str:
-        content = content.encode('utf-8')
-    m = hashlib.sha256()
-    m.update(content)
-    return m.hexdigest()
-
-
 def mime(path):
     for i in mimetable:
         if path.endswith(i):
@@ -171,8 +163,8 @@ AudioHandler.has_gzip = has_gzip
 VideoHandler.smart_write = smart_reply
 VideoHandler.has_gzip = has_gzip
 
-print("Server listening on {}".format(os.environ['PORT']))
+print("Server listening on {}".format(3000))
 
 app = make_app()
-app.listen(os.environ['PORT'])
+app.listen(3000)
 tornado.ioloop.IOLoop.current().start()
