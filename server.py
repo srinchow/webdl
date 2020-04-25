@@ -21,6 +21,8 @@ mimetable = {
 }
 
 
+sha_hash = downloader.sha_hash
+
 def mime(path):
     for i in mimetable:
         if path.endswith(i):
